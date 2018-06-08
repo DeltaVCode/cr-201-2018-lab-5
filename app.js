@@ -13,9 +13,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
+var result = a + b;
+var array = [result];
+console.log(array);
 
+array[1] = 'The sum of ' + a + ' and ' + b + ' is ' + result + '.';
+
+return array;
 }
 
+
+// asdfdsfa
+// asdfdsfa
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
 
@@ -52,6 +61,7 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+    var abSum = sum(a,b)[0];
 
 }
 
@@ -126,3 +136,7 @@ function multiplyAnyArray(dynamicArray) {
 // testMultiplyAnyArray([1,2,3,4,5]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. You're done! Submit the link to the repo following the instructions in Canvas.
+
+
+
+/////made changes testing
