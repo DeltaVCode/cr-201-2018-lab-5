@@ -15,7 +15,7 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
     var result = a + b;
     var array = [result];
-    console.log(array);
+    
 
     array[1] = "The sum of " + a + " and " + b + " is " + result;
     return array;
@@ -38,9 +38,10 @@ Test this function by hand in the console to get it working, and when you think 
 function multiply(a, b) {
     var product = a * b;
     var array = [product];
-    console.log(array);
+    
 
-    array[2] = "The product of " + a + " and " + b + " is " + product;
+    array[1] = "The product of " + a + " and " + b + " is " + product;
+    return array;
 
 }
 
@@ -61,8 +62,16 @@ IMPORTANT DETAIL: You may not use the arithmetic operators + and * in this funct
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSumAndMultiply() function and see if the test passes.*/
 
 // Write your code here
-function sumAndMultiply(a, b, c) {
 
+function sumAndMultiply(a, b, c) {
+    var absum = sum(a, b);
+    absum =sum(absum[0], c);
+    var array = [absum[0]];
+    var abmul = multiply(a, b);
+    abmul = multiply(abmul[0], c);
+    array[1] = abmul[0];
+    array[2] = "The sum of " + a + ", " + b + " and " + c + " is " + array +".";
+    array[3] = "The product of " + a + ", " + b + " and " + c + " is " + array[1] + "."; 
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
