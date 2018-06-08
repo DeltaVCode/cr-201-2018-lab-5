@@ -15,14 +15,13 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
     var result = a + b;
     var array = [result];
-    
 
-    array[1] = "The sum of " + a + " and " + b + " is " + result;
+    array[1] = "The sum of " + a + " and " + b + " is " + result + ".";
+
     return array;
 }
-
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -40,13 +39,13 @@ function multiply(a, b) {
     var array = [product];
     
 
-    array[1] = "The product of " + a + " and " + b + " is " + product;
+    array[1] = "The product of " + a + " and " + b + " is " + product +".";
     return array;
 
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -70,12 +69,14 @@ function sumAndMultiply(a, b, c) {
     var abmul = multiply(a, b);
     abmul = multiply(abmul[0], c);
     array[1] = abmul[0];
-    array[2] = "The sum of " + a + ", " + b + " and " + c + " is " + array +".";
-    array[3] = "The product of " + a + ", " + b + " and " + c + " is " + array[1] + "."; 
+    array[2] = a + " and " + b + " and " + c + " sum to " + array[0] +".";
+    array[3] = "The product of " + a + " and " + b + " and " + c + " is " + array[1] + ".";
+    
+    return array;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -91,12 +92,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumArray(sumArr) {
+    var sSum = 0
+    for(var i = 0; i < sumArr.length; i++) {
+        var sSum= sum(sumArr[i], sSum)[0];
 
+        console.log(sSum)
+    
+    }
+    var array = [sumArr]
+    array = sumArr + ' was passed in as an array of numbers, and ' + sSum + ' is their sum.';
+    return array;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray([2, 3, 4]);
+testSumArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
