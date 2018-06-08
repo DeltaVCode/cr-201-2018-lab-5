@@ -55,7 +55,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
+    var abSum = sum(a, b)[0];
+    var abcSum = sum(abSum, c)[0];
 
+    return [abcSum];
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
