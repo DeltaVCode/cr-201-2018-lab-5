@@ -118,11 +118,21 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-
+    var arrayMult = [];
+    arrayMult[0] = multiply(multArr[0],multArr[1])[0];
+    console.log(arrayMult[0]);
+    var i = 2;
+    while (i<(multArr.length)){
+        arrayMult[0] = multiply(arrayMult[0],multArr[i])[0];
+        console.log(arrayMult);
+        i++;
+    }
+    arrayMult[1] = "The numbers " + multArr + " have a product of " + arrayMult[0] + ".";
+    return arrayMult;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray([2, 3, 4]);
+testMultiplyArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
