@@ -15,7 +15,6 @@ Test this function by hand in the console to get it working, and when you think 
 function sum(a, b) {
     var result = a + b;
     var array = [result];
-    array[0]= result;
     console.log(array);
 
     array[1] = "The sum of " + a + " and " + b + " is " + result;
@@ -37,6 +36,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+    var product = a * b;
+    var array = [product];
+    console.log(array);
+
+    array[2] = "The product of " + a + " and " + b + " is " + product;
 
 }
 
