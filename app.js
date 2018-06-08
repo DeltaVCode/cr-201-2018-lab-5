@@ -13,11 +13,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-
+  var result=a+b;
+  var array=[result,"The sum of "+a+" and "+b+" is "+result+"."];
+  return array;
 }
 
 // Here is the test for sum(); uncomment it to run it
-// testSum(4, 7);
+testSum(4, 7);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -31,11 +33,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-
+  var result=a*b;
+  var array=[result,"The product of "+a+" and "+b+" is "+result+"."];
+  return array;
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -52,11 +56,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-
+  var sumAB=sum(a,b);
+  var sumABC=sum(sumAB[0],c);
+  var productAB=multiply(a,b);
+  var productABC=multiply(productAB[0],c);
+  var array=[sumABC[0],productABC[0],a+" and "+b+" and "+c+" sum to "+sumABC[0]+".","The product of "+a+" and "+b+" and "+c+" is "+productABC[0]+"."];
+  return array;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
-// testSumAndMultiply(4,7,5);
+testSumAndMultiply(4,7,5);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -72,12 +81,14 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumArray(sumArr) {
-
+  var totalSum=sumArr[0]+sumArr[1]+sumArr[2];
+  var array=[totalSum,sumArr[0]+","+sumArr[1]+","+sumArr[2]+" was passed in as an array of numbers, and "+totalSum+" is their sum."];
+  return array;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray([2, 3, 4]);
+testSumArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -93,11 +104,13 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-
+  var totalProduct=multArr[0]*multArr[1]*multArr[2];
+  var array=[totalProduct,"The numbers "+multArr[0]+","+multArr[1]+","+multArr[2]+" have a product of "+totalProduct+"."];
+  return array;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray([2, 3, 4]);
+testMultiplyArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
