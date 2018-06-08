@@ -10,10 +10,14 @@ Write a function called sum() that takes in two numbers as arguments and then re
 "The sum of 4 and 7 is 11."
 
 Test this function by hand in the console to get it working, and when you think it is finished, uncomment the call for the testSum() function below and check the console to see if the test passes.*/
-
+//this is a comment for a pull req.
 // Write your code here
 function sum(a, b) {
-
+  var result = a + b;
+  var array = [result];
+  console.log(array);
+  array[1] = 'The sum of ' + a + ' and ' + b + ' is ' + result + '.';
+  return array;
 }
 
 // Here is the test for sum(); uncomment it to run it
