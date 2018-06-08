@@ -13,16 +13,19 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-    var result = a+b;
-    var array = [result];
+  var result = a+b;
+  var array = [result];
 
-    console.log(array);
+  console.log(array);
 
-    array[1] = 'the sum of ' +a+ ' and ' +b+ ' is ' +result+ '.'
+  array[1] = ('the sum of ' +a+ ' and ' +b+ ' is ' +result+ '.');
 
-    var result = [result]
+  alert(array[1]);
 
 }
+
+sum(4,7);
+
 
 // Here is the test for sum(); uncomment it to run it
 // testSum(4, 7);
