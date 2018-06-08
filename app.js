@@ -24,7 +24,6 @@ function sum(a, b) {
 
 }
 
-sum(4,7);
 
 
 // Here is the test for sum(); uncomment it to run it
@@ -42,6 +41,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
+  var result = a * b;
+  var array = [result];
+
+  console.log(array);
 
 }
 
