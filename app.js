@@ -20,7 +20,7 @@ function sum(a, b) {
 
   array[1] = ('The sum of ' +a+ ' and ' +b+ ' is ' +result+ '.');
 
-  
+
   return array;
 
 }
@@ -47,10 +47,14 @@ function multiply(a, b) {
 
   console.log(array);
 
+  array[1] = ('The product of ' +a+ ' and ' +b+ ' is ' +result+'.');
+
+  return array;
+
 }
 
 // Here is the test for multiply(); uncomment it to run it
-// testMultiply(5,9);
+testMultiply(5,9);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
