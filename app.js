@@ -13,11 +13,11 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sum(a, b) {
-    var theSum = a+b;
-    var arraySum = [theSum];
+  var theSum = a+b;
+  var arraySum = [theSum];
 
-    arraySum[1] = 'The sum of '+a+' and '+b+' is '+theSum+'.';
-    return arraySum;
+  arraySum[1] = 'The sum of '+a+' and '+b+' is '+theSum+'.';
+  return arraySum;
 }
 
 // Here is the test for sum(); uncomment it to run it
@@ -35,10 +35,10 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiply(a, b) {
-    var theProduct = a*b;
-    var arrayProd = [theProduct];
-    arrayProd[1] = 'The product of '+a+' and '+b+' is '+theProduct+'.';
-    return arrayProd;
+  var theProduct = a*b;
+  var arrayProd = [theProduct];
+  arrayProd[1] = 'The product of '+a+' and '+b+' is '+theProduct+'.';
+  return arrayProd;
 
 }
 
@@ -60,16 +60,16 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumAndMultiply(a, b, c) {
-    var arraySumAndMultiply = [];
-    var sumArray=sum(a,sum(b,c)[0]);
-    console.log(arraySumAndMultiply[0]);
-    var multArray= multiply(a,multiply(b,c)[0]);
-    console.log(multiply(a,multiply(b,c)[0]));
-    arraySumAndMultiply[0]=sumArray[0];
-    arraySumAndMultiply[1]=multArray[0];
-    arraySumAndMultiply[2]= a + " and " + b + " and " + c + " sum to " + arraySumAndMultiply[0] + ".";
-    arraySumAndMultiply[3]="The product of " + a + " and " + b + " and " + c + " is " + arraySumAndMultiply[1] + "."
-    return arraySumAndMultiply;
+  var arraySumAndMultiply = [];
+  var sumArray=sum(a,sum(b,c)[0]);
+  console.log(arraySumAndMultiply[0]);
+  var multArray= multiply(a,multiply(b,c)[0]);
+  console.log(multiply(a,multiply(b,c)[0]));
+  arraySumAndMultiply[0]=sumArray[0];
+  arraySumAndMultiply[1]=multArray[0];
+  arraySumAndMultiply[2]= a + ' and ' + b + ' and ' + c + ' sum to ' + arraySumAndMultiply[0] + '.';
+  arraySumAndMultiply[3]='The product of ' + a + ' and ' + b + ' and ' + c + ' is ' + arraySumAndMultiply[1] + '.';
+  return arraySumAndMultiply;
 }
 
 // Here is the test for sumAndMultiply(); uncomment it to run it
@@ -89,12 +89,20 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumArray(sumArr) {
-
+    var arraySum = [];
+    arraySum[0] = sum(sumArr[0],sumArr[1])[0];
+    var i = 2;
+    while (i<(sumArr.length)){
+        arraySum[0] = sum(arraySum[0],sumArr[i])[0];
+        i++;
+    }
+    arraySum[1] = sumArr + ' was passed in as an array of numbers, and ' + arraySum[0] + ' is their sum.';
+    return arraySum;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray([2, 3, 4]);
+testSumArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
