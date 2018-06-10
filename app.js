@@ -93,19 +93,19 @@ Test this function by hand in the console to get it working, and when you think 
 function sumArray(sumArr) {
     var sSum = 0
     for(var i = 0; i < sumArr.length; i++) {
-        var sSum= sum(sumArr[i], sSum)[0];
+        var sSum = sum(sumArr[i], sSum)[0];
 
         console.log(sSum)
     
     }
     var array = [sumArr]
-    array = sumArr + ' was passed in as an array of numbers, and ' + sSum + ' is their sum.';
+    array[1] = sumArr + ' was passed in as an array of numbers, and ' + sSum + ' is their sum.';
     return array;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
 
-// testSumArray([2, 3, 4]);
+testSumArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop. Don't forget to create a new branch for your work on the next question!
 
@@ -121,11 +121,18 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-
+    var mMult = multiply(multArr[0], multArr[1])[0];
+    for (var i = 2; i < multArr.length; i++) {
+       mMult =multiply(multArr[i], mMult)[0];
+        console.log(mMult);
+    }
+    var array = [mMult];
+    array[1] = "The numbers " + multArr + ", have the product of " + mMult + "."
+    return array  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
-// testMultiplyArray([2, 3, 4]);
+testMultiplyArray([2, 3, 4]);
 
 // Once you get the test passing, do an a-c-p cycle and synchronize the code between GitHub and your laptop.
 
