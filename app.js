@@ -127,8 +127,8 @@ function multiplyArray(multArr) {
         console.log(mMult);
     }
     var array = [mMult];
-    array[1] = "The numbers " + multArr + ", have the product of " + mMult + "."
-    return array  
+    array[1] = "The numbers " + multArr + ", have the product of " + mMult + ".";
+    return array;  
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -154,6 +154,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyAnyArray(dynamicArray) {
+    var mult = multiply(dynamicArray[0], dynamicArray[1])[0];
+    for (var i = 0; i < dynamicArray.length; i++) {
+        mult = multiply(dynamicArray[i], mult)[0];
+            console.log(mult);
+    }
+    var array = (mult);
+    array[1] = "The numbers " + dynamicArray + " have the product of " + mult + ".";
+    return array;
+
 
 }
 
