@@ -91,16 +91,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function sumArray(sumArr) {
-    var sSum = 0
-    for(var i = 0; i < sumArr.length; i++) {
-        var sSum = sum(sumArr[i], sSum)[0];
-
-        console.log(sSum)
-    
+    var sSum = [];
+    sSum[0] = sum(sumArr[0],sumArr[1])[0];
+    var i = 2;
+    while (i<(sumArr.length)){
+        sSum[0] = sum(sSum[0],sumArr[i])[0];
+        i++;
     }
-    var array = [sumArr]
-    array[1] = sumArr + ' was passed in as an array of numbers, and ' + sSum + ' is their sum.';
-    return array;
+    sSum[1] = sumArr + ' was passed in as an array of numbers, and ' + sSum[0] + ' is their sum.';
+    return sSum;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
