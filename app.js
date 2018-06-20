@@ -98,8 +98,8 @@ function sumArray(sumArr) {
         sSum[0] = sum(sSum[0], sumArr[i])[0];
         i++;
     }
-    array = sumArr + ' was passed in as an array of numbers, and ' + sSum + ' is their sum.';
-    return array;
+    sSum = sumArr + ' was passed in as an array of numbers, and ' + sSum + ' is their sum.';
+    return sSum;
 }
 
 // Here is the test for sumArray(); uncomment it to run it
