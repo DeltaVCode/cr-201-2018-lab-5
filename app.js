@@ -94,7 +94,7 @@ function sumArray(sumArr) {
     var sSum = [];
     sSum[0] = sum(sumArr[0],sumArr[1])[0];
     var i = 2;
-    while (i<(sumArr.length)){
+    while (i < (sumArr.length)){
         sSum[0] = sum(sSum[0],sumArr[i])[0];
         i++;
     }
@@ -123,7 +123,7 @@ function multiplyArray(multArr) {
     var mMult = [];
     mMult[0] = multiply(multArr[0],multArr[1])[0];
     var i = 2;
-    while (i<(multArr.length)){
+    while (i < (multArr.length)){
         mMult[0] = multiply(mMult[0],multArr[i])[0];
         i++;
     }
@@ -157,7 +157,7 @@ function multiplyAnyArray(dynamicArray) {
     var mMult = [];
     mMult[0] = multiply(dynamicArray[0],dynamicArray[1])[0];
     var i = 2;
-    while (i<(dynamicArray.length)){
+    while (i < (dynamicArray.length)){
         mMult[0] = multiply(mMult[0],dynamicArray[i])[0];
         i++;
     }
