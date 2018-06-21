@@ -94,7 +94,7 @@ function sumArray(sumArr) {
     var sSum = [];
     sSum[0] = sum(sumArr[0],sumArr[1])[0];
     var i = 2;
-    while (i<(sumArr.length)){
+    while (i < (sumArr.length)){
         sSum[0] = sum(sSum[0],sumArr[i])[0];
         i++;
     }
@@ -120,14 +120,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyArray(multArr) {
-    var mMult = multiply(multArr[0], multArr[1])[0];
-    for (var i = 2; i < multArr.length; i++) {
-       mMult =multiply(multArr[i], mMult)[0];
-        console.log(mMult);
+    var mMult = [];
+    mMult[0] = multiply(multArr[0],multArr[1])[0];
+    var i = 2;
+    while (i < (multArr.length)){
+        mMult[0] = multiply(mMult[0],multArr[i])[0];
+        i++;
     }
-    var array = [mMult];
-    array[1] = "The numbers " + multArr + ", have the product of " + mMult + ".";
-    return array;  
+    mMult[1] = "The numbers " + multArr + " have a product of " + mMult[0] + ".";
+    return mMult;
 }
 
 // Here is the test for multiplyArray(); uncomment it to run it
@@ -153,15 +154,15 @@ Test this function by hand in the console to get it working, and when you think 
 
 // Write your code here
 function multiplyAnyArray(dynamicArray) {
-    var mult = multiply(dynamicArray[0], dynamicArray[1])[0];
-    for (var i = 0; i < dynamicArray.length; i++) {
-        mult = multiply(dynamicArray[i], mult)[0];
-            console.log(mult);
+    var mMult = [];
+    mMult[0] = multiply(dynamicArray[0],dynamicArray[1])[0];
+    var i = 2;
+    while (i < (dynamicArray.length)){
+        mMult[0] = multiply(mMult[0],dynamicArray[i])[0];
+        i++;
     }
-    var array = (mult);
-    array[1] = "The numbers " + dynamicArray + " have the product of " + mult + ".";
-    return array;
-
+    mMult[1] = "The numbers " + dynamicArray + " have a product of " + mMult[0] + ".";
+    return mMult;
 
 }
 
