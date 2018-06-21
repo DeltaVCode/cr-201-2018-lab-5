@@ -95,7 +95,7 @@ function sumArray(sumArr) {
     sSum[0] = sum(sumArr[0],sumArr[1])[0];
     var i = 2;
     while (i<(sumArr.length)){
-        sSum[0] = sum(arraySum[0],sumArr[i])[0];
+        sSum[0] = sum(sSum[0],sumArr[i])[0];
         i++;
     }
     sSum[1] = sumArr + ' was passed in as an array of numbers, and ' + sSum[0] + ' is their sum.';
@@ -124,7 +124,7 @@ function multiplyArray(multArr) {
     mMult[0] = multiply(multArr[0],multArr[1])[0];
     var i = 2;
     while (i<(multArr.length)){
-        mMult[0] = multiply(arrayMult[0],multArr[i])[0];
+        mMult[0] = multiply(mMult[0],multArr[i])[0];
         i++;
     }
     mMult[1] = "The numbers " + multArr + " have a product of " + mMult[0] + ".";
